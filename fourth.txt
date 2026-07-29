@@ -1,0 +1,103 @@
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ touch third.txt
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git init
+Initialized empty Git repository in C:/Users/bmd/Desktop/learn__git/.git/
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git add third.txt
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) 332db42] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git log
+commit 332db42f7eeb46d4b95b42bb303d5ff3b4f5108f (HEAD -> master)
+Author: maretou <lahimarietou@gmail.com>
+Date:   Wed Jul 29 13:24:44 2026 +0000
+
+    adding third.txt
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ touch fourth.txt
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git add fourth.txt
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ commit -m "adding fourth.txt"
+bash: commit: command not found
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git commit -m "adding fourth.txt"
+[master eabae2c] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ rm third.txt
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git add .
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git commit -m "removing third.txt"
+[master 9426867] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git log
+commit 9426867191474952dae02e67683f648c681a052e (HEAD -> master)
+Author: maretou <lahimarietou@gmail.com>
+Date:   Wed Jul 29 13:32:25 2026 +0000
+
+    removing third.txt
+
+commit eabae2cd258f332849df00f8522f7fd19f7017a6
+Author: maretou <lahimarietou@gmail.com>
+Date:   Wed Jul 29 13:30:05 2026 +0000
+
+    adding fourth.txt
+
+commit 332db42f7eeb46d4b95b42bb303d5ff3b4f5108f
+Author: maretou <lahimarietou@gmail.com>
+Date:   Wed Jul 29 13:24:44 2026 +0000
+
+    adding third.txt
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git config --global core.pager cat
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git config --global --list
+user.name=maretou
+user.email=lahimarietou@gmail.com
+core.pager=cat
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git config --global
+error: no action specified
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ ^C
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git config --global
+error: no action specified
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ ^C
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
+$ git config --global --list
+user.name=maretou
+user.email=lahimarietou@gmail.com
+core.pager=cat
+
+bmd@DESKTOP-DKIGSOD MINGW64 ~/Desktop/learn__git (master)
